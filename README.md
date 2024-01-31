@@ -57,8 +57,6 @@ The Player node represents the main character controlled by the player. It handl
 
 The Player node is implemented as a custom class `Player` derived from the `Area2D` class provided by Godot. The implementation files include `player.h` and `player.cpp`.
 
-- **Clone godot-cpp
-
 ##### Features
 
 - **Movement**: The player can move in four directions (up, down, left, right) using keyboard input.
@@ -145,6 +143,7 @@ To integrate the `Player` class into gameplay:
 1. **Node Placement**: Add the `Player` node to your scene hierarchy in the Godot editor.
 2. **Property Adjustment**: Fine-tune the properties of the `Player` node, such as speed and animation, to achieve desired gameplay behavior.
 3. **Signal Handling**: Connect signal emitted by the `Player` node to other nodes or scripts to trigger specific actions based on game events. In this case it is `hit` signal.
+4. **Attatch Child Nodes**: Can Attatch child nodes in Godot editor to add functionality
 
 ## Game Design
 
