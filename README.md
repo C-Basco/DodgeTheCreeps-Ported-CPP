@@ -1,7 +1,7 @@
 # DodgeTheCreeps-Ported-CPP
 
 ## Description
-Dodge the Creeps is a 2D game developed using the Godot engine utilizing the GDextension framework to run C++ code.  </br>
+Dodge the Creeps is a 2D game developed using the Godot engine as a tutorial/introduction to Godot. This project utilizes the GDextension framework to build a plugin encapsulating custom C++ code.  </br>
 Rack up points while you avoid the creeps that randomly spawn. Survive the chaos as they travel in all different directions. Once you collide with one of them - thats it, game over!</br>
 Lets see how long you last!
 
@@ -79,27 +79,23 @@ In "Dodge the Creeps", the players objective is to avoid the creeps for as long 
 - The timer doesn't run out but creep spawn randomness creates difficulty in avoiding them. This allows for an engaging challenge.
 
 ## GDExtension Plugin Gameplay
-### Overview
-In this section, we'll explore the gameplay mechanics and features enabled by the GDExtension plugin in your Godot project. The GDExample node provided by the plugin serves as a versatile tool for creating dynamic animations and interactions within your game.
 
-### GDExample Node
-The GDExample node, derived from the Sprite2D class, serves as the centerpiece of dynamic animations in your game. It offers the following features:
+#### Overview
+The GDExtension plugin enhances gameplay by enabling dynamic movement, animation, and collision detection for the player character. The `Player` class serves as the centerpiece of player interaction in the game.
 
-- Dynamic Movement: The node utilizes sine and cosine functions to generate dynamic movement patterns, creating visually appealing animations.
-- Custom Properties: Through the use of custom properties like amplitude and speed, developers can fine-tune the behavior of the node to suit specific gameplay requirements.
-- Signal Emission: The node emits signals, such as position_changed, allowing for seamless integration with other nodes and scripts in your game.
+#### GDExample Node
+The `Player` class, derived from the `Area2D` class, provides the following features:
 
-### Integrating GDExample into Gameplay
-Here's how you can integrate the GDExample node into your gameplay:
+- Dynamic Movement: Handles player input and updates the player's position based on velocity.
+- Animation: Changes the player character's animation based on its movement direction, enhancing visual feedback.
+- Collision Detection: Detects collisions between the player character and other objects, triggering game events.
 
-- Node Placement: Add the GDExample node to your scene hierarchy in the Godot editor.
-- Property Adjustment: Fine-tune the properties of the GDExample node, such as amplitude and speed, to achieve the desired animation behavior.
-- Signal Handling: Connect the position_changed signal emitted by the GDExample node to other nodes or scripts to trigger specific actions based on its position changes.
+#### Integrating GDExample into Gameplay
+To integrate the `Player` class into gameplay:
 
-### Example Use Cases
-- Dynamic Obstacles: Use the GDExample node to create dynamic obstacles that move in sinusoidal patterns, adding challenge and variety to your game levels.
-- Animated Collectibles: Utilize the dynamic movement capabilities of the GDExample node to create visually appealing animated collectible items that players can interact with.
-- Environmental Effects: Implement environmental effects such as floating platforms or swaying foliage using the GDExample node to enhance the immersive experience of your game world.
+1. **Node Placement**: Add the `Player` node to your scene hierarchy in the Godot editor.
+2. **Property Adjustment**: Fine-tune the properties of the `Player` node, such as speed and animation, to achieve desired gameplay behavior.
+3. **Signal Handling**: Connect signals emitted by the `Player` node to other nodes or scripts to trigger specific actions based on game events.
 
-### Customization and Expansion
+#### Customization and Expansion
 Feel free to customize the GDExample node further or extend its functionality to suit your specific gameplay needs. You can modify the node's behavior by adjusting its properties, adding new methods, or implementing additional signals as required by your game design.
